@@ -1,5 +1,5 @@
 # yoga App
 
-![XRecorder_Edited_12082022_110130_AdobeExpress](https://user-images.githubusercontent.com/102517154/184292030-9321213a-5b8b-4d9d-83a2-5fb76e3b8eec.gif)
-
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/102517154/184293231-974981b2-a838-4193-90b8-e0819a6a3677.gif" width="200" height="400" />
+</p>
