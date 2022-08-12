@@ -51,10 +51,10 @@ class CustomAppBar extends StatelessWidget {
               ],
             ),
             actions: [
-              Icon(Icons.notifications,color: iconAnim.value,),
-              const Padding(
-                padding: EdgeInsets.only(top: 10,right: 10),
-                child: CircleAvatar(backgroundColor: Colors.green,),
+
+              Padding(
+                padding: EdgeInsets.only(right: 10),
+                child: Icon(Icons.notifications,color: iconAnim.value,)
               )
             ],
           );
