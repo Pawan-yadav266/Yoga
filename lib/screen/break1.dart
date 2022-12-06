@@ -5,9 +5,10 @@ import 'package:provider/provider.dart';
 import 'package:yoga_new/screen/Finish.dart';
 
 import 'NewExersise.dart';
+import 'newexercise1.dart';
 
-class BreakTime extends StatelessWidget {
-  const BreakTime({Key? key}) : super(key: key);
+class BreakTime1 extends StatelessWidget {
+  const BreakTime1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +59,14 @@ class BreakTime extends StatelessWidget {
                         ),
                         child: Center(
                             child: InkWell(
-                              onTap: ()=>{},
+                              onTap: ()=>{Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>NewExercise()))},
                               child: Text(
-                          'SKIP',
-                          style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20),
-                        ),
+                                'SKIP',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 20),
+                              ),
                             ))),
                   ),
                   SizedBox(
@@ -97,7 +98,7 @@ class BreakTime extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     child: Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                        EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                         child: Text(
                           'Next: DAND BETHAK',
                           style: TextStyle(
@@ -125,7 +126,7 @@ class Breaktimer with ChangeNotifier {
       notifyListeners();
       if (fivecount == 0) {
         timer.cancel();
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>NewExercise()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>WorkOutDet1()));
       }
     });
   }

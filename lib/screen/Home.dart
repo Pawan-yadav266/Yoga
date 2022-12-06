@@ -62,8 +62,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   }
 
 
-
-
   bool ScrollListner(ScrollNotification scrollNotification) {
     bool scroll = false;
     if (scrollNotification.metrics.axis == Axis.vertical) {

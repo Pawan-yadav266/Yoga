@@ -68,7 +68,7 @@ class _StartupState extends State<Startup> {
                         ),
                       ),
                       title: Text(
-                        'Yoga ${index}',
+                        'Yoga ${index+1}',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 18),
                       ),

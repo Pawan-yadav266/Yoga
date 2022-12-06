@@ -14,7 +14,7 @@ class ZeroToFive with ChangeNotifier {
       if(fivecount==0)
         {
           timer.cancel();
-          Navigator.push(context, MaterialPageRoute(builder: (_)=>WorkOutDet()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>WorkOutDet()));
         }
 
     });

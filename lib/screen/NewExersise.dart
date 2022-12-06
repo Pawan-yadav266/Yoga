@@ -3,18 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yoga_new/provider/zeroToTHirty.dart';
-import 'package:yoga_new/screen/Break.dart';
 import 'package:yoga_new/widgets/visible.dart';
 
+import '../provider/newExerciseProvider.dart';
 import '../provider/zeroToFiveCount.dart';
 
-class WorkOutDet extends StatelessWidget {
-  const WorkOutDet({Key? key}) : super(key: key);
+class NewExercise extends StatelessWidget {
+  const NewExercise({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<ZeroToThirty>(
-      create: (BuildContext context) { return ZeroToThirty.name(context); },
+    return ChangeNotifierProvider<NewZeroToThirty>(
+      create: (BuildContext context) { return NewZeroToThirty.name(context); },
       child: Scaffold(
         body: Stack(
           children: [
@@ -24,14 +24,14 @@ class WorkOutDet extends StatelessWidget {
                   height: 320,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          fit: BoxFit.fitHeight,
-                          image: NetworkImage('https://s3.amazonaws.com/prod.skimble/assets/1632586/image_iphone.jpg')
+                          fit: BoxFit.cover,
+                          image: NetworkImage('https://s3.amazonaws.com/prod.skimble/assets/1632578/image_iphone.jpg')
 
                       )
                   ),
                 ),
                 SizedBox(height: 20,),
-                Text('cross leg side bend left',style: TextStyle(fontWeight:FontWeight.w600,fontSize: 30),),
+                Text('cross leg side bend right',style: TextStyle(fontWeight:FontWeight.w600,fontSize: 30),),
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: 45,vertical: 25),
                     decoration: BoxDecoration(
@@ -44,7 +44,7 @@ class WorkOutDet extends StatelessWidget {
                       children: [
                         Text('00',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),),
                         Text(':',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),),
-                        Consumer<ZeroToThirty>(builder: (BuildContext context, value, Widget? child) {
+                        Consumer<NewZeroToThirty>(builder: (BuildContext context, value, Widget? child) {
                           return Text(value.fivecount<10?'0${value.fivecount.toString()}':value.fivecount.toString(),style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),);
                         },)
                       ],
@@ -53,7 +53,7 @@ class WorkOutDet extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                Consumer<ZeroToThirty>(
+                Consumer<NewZeroToThirty>(
                   builder: (BuildContext context, value, Widget? child) {
                     return InkWell(
                       onTap:(){
@@ -90,7 +90,7 @@ class WorkOutDet extends StatelessWidget {
 
               ],
             ),
-            Consumer<ZeroToThirty>(builder: (BuildContext context, value, Widget? child) {
+            Consumer<NewZeroToThirty>(builder: (BuildContext context, value, Widget? child) {
               return  Visibility(
                   visible: value.isvisible,
                   child: Container(
@@ -154,7 +154,7 @@ class WorkOutDet extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 10,),
-                        Consumer<ZeroToThirty>(
+                        Consumer<NewZeroToThirty>(
                           builder: (BuildContext context, value, Widget? child) {
                             return InkWell(
                               onTap: (){

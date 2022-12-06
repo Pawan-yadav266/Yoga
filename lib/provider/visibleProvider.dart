@@ -6,7 +6,4 @@ class VisibleProvider with ChangeNotifier
   bool isVisible = false;
 
 
-
-
-
 }
